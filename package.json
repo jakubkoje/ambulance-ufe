@@ -43,17 +43,11 @@
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.5",
     "jest": "^29.7.0",
-    "jest-cli": "^29.7.0",
-    "puppeteer": "^24.3.0"
+    "jest-cli": "^29.7.0"
   },
   "license": "MIT",
   "dependencies": {
     "@material/web": "^2.4.1"
   },
-  "packageManager": "pnpm@10.27.0",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "puppeteer"
-    ]
-  }
+  "packageManager": "pnpm@10.27.0"
 }
