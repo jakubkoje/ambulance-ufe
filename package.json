@@ -50,5 +50,5 @@
   "dependencies": {
     "@material/web": "^2.4.1"
   },
-  "packageManager": "pnpm@24.13.1"
+  "packageManager": "pnpm@10.27.0"
 }
