@@ -21,6 +21,7 @@ export const config: Config = {
     },
   ],
   testing: {
-    browserHeadless: "shell",
+    browserHeadless: 'shell',
   },
+  globalScript: 'src/global/app.ts',
 };
