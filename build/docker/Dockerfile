@@ -22,7 +22,7 @@ COPY pnpm-lock.yaml package.json pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile
 
 # =============================================================================
-# Build stage - Build the Nuxt application
+# Build stage - Build the application
 # =============================================================================
 FROM base AS build
 
