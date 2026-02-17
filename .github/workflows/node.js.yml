@@ -21,7 +21,7 @@ jobs:
           cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm exec puppeteer browsers install chrome
+      - run: pnpm exec puppeteer browsers install chrome-headless-shell
 
       - run: pnpm test
       - run: pnpm run build --if-present
