@@ -16,7 +16,7 @@ FROM base AS deps
 WORKDIR /app
 
 # Copy lockfile
-COPY pnpm-lock.yaml package.json pnpm-workspace.yaml ./
+COPY pnpm-lock.yaml package.json ./
 
 # Install ALL dependencies (including devDependencies for TypeScript, etc.)
 RUN pnpm install --frozen-lockfile
