@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface XjelinekjAmbulanceWlApp {
+        "ambulanceId": string;
+        "apiBase": string;
         /**
           * @default ''
          */
@@ -16,6 +18,8 @@ export namespace Components {
         "entryId": string;
     }
     interface XjelinekjAmbulanceWlList {
+        "ambulanceId": string;
+        "apiBase": string;
     }
 }
 export interface XjelinekjAmbulanceWlEditorCustomEvent<T> extends CustomEvent<T> {
@@ -75,6 +79,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface XjelinekjAmbulanceWlApp {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         /**
           * @default ''
          */
@@ -85,20 +91,28 @@ declare namespace LocalJSX {
         "onEditor-closed"?: (event: XjelinekjAmbulanceWlEditorCustomEvent<string>) => void;
     }
     interface XjelinekjAmbulanceWlList {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         "onEntry-clicked"?: (event: XjelinekjAmbulanceWlListCustomEvent<string>) => void;
     }
 
     interface XjelinekjAmbulanceWlAppAttributes {
         "basePath": string;
+        "apiBase": string;
+        "ambulanceId": string;
     }
     interface XjelinekjAmbulanceWlEditorAttributes {
         "entryId": string;
+    }
+    interface XjelinekjAmbulanceWlListAttributes {
+        "apiBase": string;
+        "ambulanceId": string;
     }
 
     interface IntrinsicElements {
         "xjelinekj-ambulance-wl-app": Omit<XjelinekjAmbulanceWlApp, keyof XjelinekjAmbulanceWlAppAttributes> & { [K in keyof XjelinekjAmbulanceWlApp & keyof XjelinekjAmbulanceWlAppAttributes]?: XjelinekjAmbulanceWlApp[K] } & { [K in keyof XjelinekjAmbulanceWlApp & keyof XjelinekjAmbulanceWlAppAttributes as `attr:${K}`]?: XjelinekjAmbulanceWlAppAttributes[K] } & { [K in keyof XjelinekjAmbulanceWlApp & keyof XjelinekjAmbulanceWlAppAttributes as `prop:${K}`]?: XjelinekjAmbulanceWlApp[K] };
         "xjelinekj-ambulance-wl-editor": Omit<XjelinekjAmbulanceWlEditor, keyof XjelinekjAmbulanceWlEditorAttributes> & { [K in keyof XjelinekjAmbulanceWlEditor & keyof XjelinekjAmbulanceWlEditorAttributes]?: XjelinekjAmbulanceWlEditor[K] } & { [K in keyof XjelinekjAmbulanceWlEditor & keyof XjelinekjAmbulanceWlEditorAttributes as `attr:${K}`]?: XjelinekjAmbulanceWlEditorAttributes[K] } & { [K in keyof XjelinekjAmbulanceWlEditor & keyof XjelinekjAmbulanceWlEditorAttributes as `prop:${K}`]?: XjelinekjAmbulanceWlEditor[K] };
-        "xjelinekj-ambulance-wl-list": XjelinekjAmbulanceWlList;
+        "xjelinekj-ambulance-wl-list": Omit<XjelinekjAmbulanceWlList, keyof XjelinekjAmbulanceWlListAttributes> & { [K in keyof XjelinekjAmbulanceWlList & keyof XjelinekjAmbulanceWlListAttributes]?: XjelinekjAmbulanceWlList[K] } & { [K in keyof XjelinekjAmbulanceWlList & keyof XjelinekjAmbulanceWlListAttributes as `attr:${K}`]?: XjelinekjAmbulanceWlListAttributes[K] } & { [K in keyof XjelinekjAmbulanceWlList & keyof XjelinekjAmbulanceWlListAttributes as `prop:${K}`]?: XjelinekjAmbulanceWlList[K] };
     }
 }
 export { LocalJSX as JSX };

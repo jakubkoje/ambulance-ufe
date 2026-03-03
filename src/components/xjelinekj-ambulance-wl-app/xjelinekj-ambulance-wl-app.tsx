@@ -13,8 +13,10 @@ declare global {
 })
 export class XjelinekjAmbulanceWlApp {
   @State() private relativePath = '';
-
   @Prop() basePath: string = '';
+
+  @Prop() apiBase: string;
+  @Prop() ambulanceId: string;
 
   componentWillLoad() {
     const baseUri = new URL(this.basePath, document.baseURI || '/').pathname;
@@ -61,7 +63,11 @@ export class XjelinekjAmbulanceWlApp {
             onentry-clicked={(ev: CustomEvent<string>) => navigate('./entry/' + ev.detail)}
           ></xjelinekj-ambulance-wl-editor>
         ) : (
-          <xjelinekj-ambulance-wl-list></xjelinekj-ambulance-wl-list>
+          <xjelinekj-ambulance-wl-list
+            ambulance-id={this.ambulanceId}
+            api-base={this.apiBase}
+            onentry-clicked={(ev: CustomEvent<string>) => navigate('./entry/' + ev.detail)}
+          ></xjelinekj-ambulance-wl-list>
         )}
       </Host>
     );
