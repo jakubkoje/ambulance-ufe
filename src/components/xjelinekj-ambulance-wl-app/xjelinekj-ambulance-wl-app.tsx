@@ -59,6 +59,8 @@ export class XjelinekjAmbulanceWlApp {
         {element === 'editor' ? (
           <xjelinekj-ambulance-wl-editor
             entry-id={entryId}
+            ambulance-id={this.ambulanceId}
+            api-base={this.apiBase}
             oneditor-closed={() => navigate('./list')}
             onentry-clicked={(ev: CustomEvent<string>) => navigate('./entry/' + ev.detail)}
           ></xjelinekj-ambulance-wl-editor>
